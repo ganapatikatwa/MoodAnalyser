@@ -17,15 +17,15 @@ namespace MoodAnalyser
 
         public string Analyser()
         {
-            if (message.ToLower().Contains("happy"))
-            {
-                Console.WriteLine("Happy");
-                return "happy";
-            }
-            else
+            if (message.ToLower().Contains("sad"))
             {
                 Console.WriteLine("Sad");
                 return "sad";
+            }
+            else
+            {
+                Console.WriteLine("Happy");
+                return "happy";
             }
         }
     }
