@@ -6,26 +6,29 @@ using System.Threading.Tasks;
 
 namespace MoodAnalyser
 {
-    public class MoodAnalyser1
+    public class MoodAnalyser
     {
+        //Refactor to take message in Constructor
         public string message;
+        public MoodAnalyser()
+        {
 
-        public MoodAnalyser1(string message)
+        }
+
+        public MoodAnalyser(string message)
         {
             this.message = message;
         }
 
-        public string Analyser()
+        public string AnalyseMood()
         {
-            if (message.ToLower().Contains("sad"))
+            if (message.ToUpper().Contains("SAD"))
             {
-                Console.WriteLine("Sad");
-                return "sad";
+                return "Sad Mood";
             }
             else
             {
-                Console.WriteLine("Happy");
-                return "happy";
+                return "Happy Mood";
             }
         }
     }
